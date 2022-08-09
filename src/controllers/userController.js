@@ -386,14 +386,14 @@ const updateProfile = async function (req, res) {
 
         obj.address = {
             shipping: {
-                street: address.shipping.street || findUser.address.shipping.street,
-                city: address.shipping.city || findUser.address.shipping.city,
-                pincode: address.shipping.pincode || findUser.address.shipping.pincode
+                street: address?.shipping?.street || findUser.address.shipping.street,
+                city: address?.shipping?.city || findUser.address.shipping.city,
+                pincode: address?.shipping?.pincode || findUser.address.shipping.pincode
             },
             billing: {
-                street: address.billing.street || findUser.address.billing.street,
-                city: address.billing.city || findUser.address.billing.city,
-                pincode: address.billing.pincode || findUser.address.billing.pincode
+                street: address?.billing?.street || findUser.address.billing.street,
+                city: address?.billing?.city || findUser.address.billing.city,
+                pincode: address?.billing?.pincode || findUser.address.billing.pincode
             }
         }
 
